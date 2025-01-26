@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react";
 import ObjectPropertiesEditor from "./ObjectPropertiesEditor";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 
 export default function App() {
   const [schema, setSchema] = useState({
@@ -124,8 +126,18 @@ export default function App() {
           {error && <p className="text-red-500 mt-2">{error}</p>}
         </div>
       </div>
-      <div className="mt-4 text-center">
-        Made by <a href="http://x.com/matt_r_steele" target="_blank" className="underline">mrsteele</a>
+      <div className="mt-4 flex">
+        <div>
+          Copyright &copy; {new Date().getFullYear()} by <a href="http://x.com/matt_r_steele" target="_blank" className="underline">mrsteele</a>
+        </div>
+        <div className="flex ml-auto text-2xl gap-4">
+          <a href="http://x.com/matt_r_steele" target="_blank">
+            <FaXTwitter />
+          </a>
+          <a href="https://github.com/mrsteele/openai-function-generator" target="_blank">
+            <FaGithub />
+          </a>
+        </div>
       </div>
     </div>
   );
